@@ -65,11 +65,11 @@ resource "aws_route_table_association" "rta" {
 variable "vpc_cidr" {
   description = "VPC CIDR Range"
   type = string
+  default =  "10.0.0.0/16"
 }
 
 variable "subnet_cidr" {
     description = "Subnet CIDRS"
     type = list(string)
+    default =  [ "10.0.1.0/24", "10.0.2.0/24" ]
 }
-vpc_cidr = "10.0.0.0/16"
-subnet_cidr = [ "10.0.1.0/24", "10.0.2.0/24" ]
